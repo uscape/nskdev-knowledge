@@ -1,0 +1,6 @@
+<h2>Knowledge Summeries</h2>
+<ul class="knowledges">
+<% knowledges.forEach( function(knowledge) { %>
+  <li><a href="/detail/<%=knowledge._id%>"><%= knowledge.summery %></a></li>
+<% }); %>
+</ul>

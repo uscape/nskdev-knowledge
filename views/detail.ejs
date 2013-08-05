@@ -1,0 +1,16 @@
+<h1><%= knowledge.summery %></h1>
+
+<div class="disp">
+  <p><%= knowledge.problem %></p>
+</div>
+<div class="disp">
+  <p><%= knowledge.solution %></p>
+</div>
+
+<form action="/edit/<%= knowledge._id %>" method="POST">
+  <p><input type="submit" value="Edit" class="button"></p>
+</form>
+
+<form action="/delete/<%= knowledge._id %>" method="POST">
+  <p><input type="submit" value="Delete" class="button"></p>
+</form>
