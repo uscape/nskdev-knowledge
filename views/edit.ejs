@@ -6,13 +6,13 @@
   if (knowledge) {
     sum = knowledge.summery;
     prob = knowledge.problem;
-    sul = knowledge.solution;
+    sol = knowledge.solution;
   }
  %>
 <form action="/edited" method="post">
   <p><input type="text" placeholder="Summery" name="summery" id="summery" size="40" value="<%= sum %>"></p>
 <!--  <p><input type="text" placeholder="Space separated list of survey choices" name="choices" id="choices" size="80"></p> -->
-  <p><textarea class="enter" placeholder="Problem or error or situation" name="problem" id="problem" rows="5" cols="40"><%= prob %></textarea></p>
+  <p><textarea class="enter" placeholder="Problem or error or situation" name="problem" id="problem" rows="5" cols="40"><<%= prob %></textarea></p>
   <p><textarea class="enter" placeholder="Solution or answer or other description" name="solution" id="solution" rows="5" cols="40"><%= sol %></textarea></p>
   <p><input type="submit" value="Create Knowledge" class="button"></p>
 </form>

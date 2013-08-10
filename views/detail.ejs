@@ -1,10 +1,30 @@
-<h1><%= knowledge.summery %></h1>
+<%
+  var sum = "";
+  var prob = "";
+  var sol = "";
+  if (knowledge) {
+    sum = knowledge.summery;
+    prob = knowledge.problem;
+    sol = knowledge.solution;
+    prob = prob.replace(/\r\n/g, "<br/>");
+    prob = prob.replace(/\n/g, "<br/>");
+    sol = sol.replace(/\r\n/g, "<br/>");
+    sol = sol.replace(/\n/g, "<br/>");
+  }
+ %>
+<h1><%= sum %></h1>
 
-<div class="disp">
-  <p><%= knowledge.problem %></p>
+<div class="subtitle">
+  <p>Problem</p>
 </div>
 <div class="disp">
-  <p><%= knowledge.solution %></p>
+  <p><%- prob %></p>
+</div>
+<div class="subtitle">
+  <p>Solution</p>
+</div>
+<div class="disp">
+  <p><%- sol %></p>
 </div>
 
 <form action="/edit/<%= knowledge._id %>" method="POST">

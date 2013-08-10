@@ -57,6 +57,12 @@ run = function(client) {
       res.render('edit.ejs', { knowledge: doc } );
     });
   });
+
+  // Edit from Detail page
+  app.get('/edit', function(req, res) {
+    res.header('Cache-Control','private');
+    res.render('edit.ejs', { knowledge: null } );
+  });
   
   // Delete from Detail page
   app.post('/delete/:id', function(req, res) {

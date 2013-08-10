@@ -105,3 +105,7 @@ input[type="password"] {
   background-color: rgb(124,81,0);
   color: white;
 }
+.disp {
+  margin-left: 2em;
+  color: rgb(30,30,30);
+}
